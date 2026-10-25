@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Elektro-Bud - wyszukiwanie produktu</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main>
+    <h1>Wyszukiwanie produktu</h1>
+    <p>Wpisz kod EAN lub nazwę produktu. Dane są przykładowe.</p>
+    <form id="searchForm">
+      <label for="searchInput">Kod EAN lub nazwa</label>
+      <div class="searchRow">
+        <input id="searchInput" name="query" type="search" autocomplete="off">
+        <button type="submit">Szukaj</button>
+      </div>
+    </form>
+    <p id="message" role="status">Wpisz kod EAN lub nazwę produktu.</p>
+    <section id="result" class="resultCard" hidden aria-live="polite">
+      <h2 id="resultName"></h2>
+      <dl>
+        <div><dt>Kod EAN</dt><dd id="resultEan"></dd></div>
+        <div><dt>Kategoria</dt><dd id="resultCategory"></dd></div>
+        <div><dt>Lokalizacja</dt><dd id="resultLocation"></dd></div>
+      </dl>
+    </section>
+  </main>
+  <script src="./public/main.js" defer></script>
+</body>
+</html>
